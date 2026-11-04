@@ -1,0 +1,135 @@
+/* ---------- Theme tokens ---------- */
+:root {
+    --bg1: #f0eeea;
+    --bg2: #cdcac4;
+    --fg: #1a1a1c;
+    --mut: #5d5b58;
+    --panel: rgba(255,255,255,.72);
+    --line: rgba(0,0,0,.14);
+    --ac: #c8101e;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top,0px);
+    padding-bottom: env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg1: #2c2e33;
+        --bg2: #0e0f12;
+        --fg: #f2f0ed;
+        --mut: #a9a6a1;
+        --panel: rgba(28,29,33,.72);
+        --line: rgba(255,255,255,.16);
+    }
+}
+:root[data-theme="dark"] {
+    --bg1: #2c2e33;
+    --bg2: #0e0f12;
+    --fg: #f2f0ed;
+    --mut: #a9a6a1;
+    --panel: rgba(28,29,33,.72);
+    --line: rgba(255,255,255,.16);
+}
+
+/* ---------- Page and 3D stage ---------- */
+html { scroll-padding-top: env(safe-area-inset-top,0px); }
+html, body { height: 100%; margin: 0; }
+body {
+    position: relative;
+    overflow: hidden;
+    font-family: Manrope,"Helvetica Neue",Arial,sans-serif;
+    color: var(--fg);
+    background: radial-gradient(ellipse at 50% 38%,var(--bg1),var(--bg2));
+}
+#stage { position: absolute; inset: 0; touch-action: none; cursor: grab; }
+#stage:active { cursor: grabbing; }
+#stage canvas { display: block; width: 100%; height: 100%; }
+
+/* ---------- Buttons ---------- */
+button {
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 600;
+    color: var(--fg);
+    background: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+button:hover { background: var(--line); }
+button:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+button.on { background: var(--ac); color: #fff; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ---------- View / door navigation ---------- */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
+    display: flex;
+    gap: 3px;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    max-width: calc(100% - 20px);
+    overflow-x: auto;
+}
+.sep { width: 1px; background: var(--line); margin: 4px 2px; }
+
+/* ---------- Start Cleaning button and progress panel ---------- */
+#cta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    max-width: calc(100% - 24px);
+    text-align: center;
+}
+.go {
+    background: linear-gradient(180deg,#e0212f,#a60b18);
+    color: #fff;
+    padding: 10px 22px;
+    font-size: .78rem;
+    letter-spacing: .02em;
+    box-shadow: 0 8px 24px rgba(200,16,30,.4), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.go:hover { background: linear-gradient(180deg,#ea2d3b,#b50e1b); }
+#st {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+}
+#st[hidden], #start[hidden] { display: none; }
+#stt { font-size: .95rem; }
+#bar {
+    display: block;
+    height: 3px;
+    width: 200px;
+    background: var(--line);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+#bar:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ac);
+    transform-origin: left;
+    transform: scaleX(var(--p,0));
+}
+#st small { font-size: .72rem; color: var(--mut); max-width: 260px; line-height: 1.35; }

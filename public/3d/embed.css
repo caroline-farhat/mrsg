@@ -1,0 +1,5 @@
+/* Embedding overrides only; css/style.css is untouched.
+   One-finger vertical drags scroll the page instead of being captured by the canvas;
+   horizontal drags and two-finger pinch still control the machine. */
+#stage { touch-action: pan-y; }
+html, body { overscroll-behavior: auto; }

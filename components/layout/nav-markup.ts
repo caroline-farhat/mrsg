@@ -1,0 +1,10 @@
+export const navHtml = `<nav id="nav" aria-label="Primary">
+<a class="brand" href="#top" aria-label="MRS.G Helmet Cleaning Systems"><span class="bw">MRS.<b>G</b></span><small data-i="m8">Helmet Cleaning Systems</small></a>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false" aria-controls="panel"><i></i><i></i><i></i></button>
+<div class="panel" id="panel">
+<div class="links" id="links"><a href="#top" data-i="m1">Home</a><a href="#service" data-i="m2">The Service</a><a href="#loc" data-i="m3">Locations</a><a href="#net" data-i="m4">Connected Network</a><a href="#references" data-i="m11">References</a><a href="#part" data-i="m5">Partnerships</a><a href="#contact" data-i="m6">Contact</a></div>
+<div class="right"><div class="lang-dd" id="ldd"><button class="lang-t" id="lt" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5S9.2 5.1 12 2.5z"/></svg><span id="lcur">EN</span><svg class="cv" viewBox="0 0 12 8" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.75 6 6.25l4.5-4.5"/></svg></button><div class="lang" role="group" aria-label="Language"><button data-l="tr" aria-pressed="false">Türkçe</button><button data-l="en" aria-pressed="true">English</button><button data-l="ar" aria-pressed="false">العربية</button></div></div>
+<button class="theme-t" id="tt" type="button" aria-label="Light mode" title="Light mode"><span class="ti"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg></span><span class="tl" id="tl">Light mode</span></button>
+<a class="getin" href="#contact" data-i="m7">Get in Touch</a></div>
+</div>
+</nav>`;

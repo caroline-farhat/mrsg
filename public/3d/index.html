@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MRS.G Helmet Cleaning Machine – 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage"></div>
+
+<div id="cta">
+    <button id="start" class="go">Start Cleaning</button>
+    <div id="st" hidden>
+        <b id="stt"></b>
+        <i id="bar"></i>
+        <small>Website preview: a compressed 5-second demonstration. A real cleaning cycle takes about 3 minutes</small>
+    </div>
+</div>
+
+<nav aria-label="Views">
+    <button data-v="front" class="on">Front</button>
+    <button data-v="three">Three-quarter</button>
+    <button data-v="side">Side</button>
+    <button data-v="inside">Inside</button>
+    <span class="sep"></span>
+    <button id="door" aria-pressed="false">Open door</button>
+</nav>
+
+<!-- Three.js r128 and the add-ons used for the reflective floor and selective bloom -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Reflector.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="js/main.js"></script>
+<script src="js/machine.js"></script>
+<script src="js/helmet.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/showroom.js"></script>
+<script src="js/controls.js"></script>
+</body>
+</html>
